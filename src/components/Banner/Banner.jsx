@@ -1,0 +1,47 @@
+import React from "react";
+
+import BannerImage from "../../assets/banner.png";
+import Dot from "../../assets/dot.png";
+
+const Banner = () => {
+  return (
+    <div className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
+        <div className="space-y-5 text-center lg:text-left">
+          <div className="inline-flex items-center justify-center lg:justify-start gap-2 bg-sky-100 text-blue-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
+            <img src={Dot} className="border rounded-full p-0.5"></img> New: AI-Powered Tools Available
+          </div>
+
+          <h1 className="lg:text-7xl sm:text-3xl md:text-5xl font-bold leading-tight tracking-tight text-blue-950">
+            Supercharge Your Digital Workflow
+          </h1>
+
+          <p className="text-base sm:text-lg text-[#627382] max-w-lg mx-auto lg:mx-0">
+            Access premium AI tools, design assets, templates, and productivity
+            software—all in one place. Start creating faster today. Explore
+            Products
+          </p>
+
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+            <button className="bg-primary hover:bg-transparent hover:text-blue-950 transition-all px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg shadow-xl shadow-red-500/30 flex items-center gap-2 sm:gap-3 text-white hover:cursor-pointer">
+              Explore Products
+            </button>
+            <button className="bg-transparent hover:bg-primary hover:text-white transition-all px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg shadow-xl shadow-red-500/30 flex items-center gap-2 sm:gap-3 text-blue-950 hover:cursor-pointer">
+              Watch Demo
+            </button>
+          </div>
+        </div>
+
+        <div className="flex justify-center lg:justify-end">
+          <img
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl rounded-3xl animate-pulse"
+            src={BannerImage}
+            alt="BannerImage"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Banner;
