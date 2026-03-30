@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Product = ({product}) => {
+  const [isAddToCart, setIsAddToCart] = useState(false);
+  const handleAddToCart = () => {
+    setIsAddToCart(true);
+    
+  }
   return (
     <div className="card bg-base-100 shadow-md border border-base-200 rounded-2xl p-6 relative hover:shadow-xl transition duration-300">
       
       {/* Tag Badge */}
       <div
-        className={`badge absolute right-5 top-5 capitalize px-3 py-3 text-xs font-medium
+        className={`badge absolute right-5 top-5 capitalize px-3 py-3 text-xs font-medium rounded-full
         ${
           product.tagType === "popular"
             ? "badge-primary"
@@ -50,9 +55,9 @@ const Product = ({product}) => {
       </ul>
 
       {/* Button */}
-      <button className="btn w-full text-white border-none rounded-full 
+      <button onClick={() => handleAddToCart()} className="btn w-full text-white border-none rounded-full 
         bg-linear-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-pink-600">
-        Buy Now
+        {isAddToCart ? "Added to Cart" : "Buy Now"}
       </button>
     </div>
   );

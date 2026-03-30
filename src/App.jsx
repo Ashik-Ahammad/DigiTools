@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Explore from "./components/Explore/Explore";
@@ -8,6 +8,7 @@ import ProductsHeading from "./components/Products/ProductsHeading/ProductsHeadi
 import Stats from "./components/Stats/Stats";
 import Products from "./components/Products/Products";
 import Tab from "./components/Tab/Tab";
+import Cart from './components/Cart/Cart';
 
 const fetchProductsData = async () => {
   const res = await fetch("/products.json");
@@ -16,6 +17,11 @@ const fetchProductsData = async () => {
 
 function App() {
   const productsPromise = fetchProductsData();
+  const [activeTab, setActiveTab] = useState("products");
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
 
   return (
     <>
@@ -26,16 +32,20 @@ function App() {
       <main>
         <Stats></Stats>
         <ProductsHeading></ProductsHeading>
-        <Tab></Tab>
-        <Suspense
-          fallback={
-            <div className="flex justify-center w-full mt-5">
-              <span className="loading loading-spinner loading-xl"></span>
-            </div>
-          }
-        >
-          <Products productsPromise={productsPromise}></Products>
-        </Suspense>
+        <Tab activeTab={activeTab}
+          handleTabChange={handleTabChange}></Tab>
+        {activeTab === "products" && (
+          <Suspense
+            fallback={
+              <div className="flex justify-center w-full mt-5 mb-5">
+                <span className="loading loading-bars loading-xl text-[#4F39F6]"></span>
+              </div>
+            }
+          >
+            <Products productsPromise={productsPromise}></Products>
+          </Suspense>
+        )}
+        {activeTab === "cart" && <Cart></Cart>}
       </main>
       <footer>
         <Explore></Explore>
