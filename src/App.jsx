@@ -10,6 +10,8 @@ import Products from "./components/Products/Products";
 import Tab from "./components/Tab/Tab";
 import Cart from './components/Cart/Cart';
 import { ToastContainer } from "react-toastify";
+import StepsSection from "./components/StepSection/StepSection";
+import PricingSection from './components/PricingSection/PricingSection';
 
 const fetchProductsData = async () => {
   const res = await fetch("/products.json");
@@ -48,6 +50,8 @@ function App() {
           </Suspense>
         )}
         {activeTab === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart>}
+        <StepsSection></StepsSection>
+        <PricingSection></PricingSection>
       </main>
       <footer>
         <Explore></Explore>

@@ -1,6 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
 import { icons } from "../../assets/icons.js";
+import { CheckIcon } from "lucide-react";
 
 const Product = ({ product, carts, setCarts }) => {
   const isAdded = carts.some(item => item.id === product.id);
@@ -49,7 +50,7 @@ const Product = ({ product, carts, setCarts }) => {
       <ul className="mb-6 space-y-2">
         {product.features.map((feature, index) => (
           <li key={index} className="flex items-center gap-2 text-sm">
-            <span className="text-green-500">✔</span>
+            <span className="text-green-500"><CheckIcon /></span>
             {feature}
           </li>
         ))}

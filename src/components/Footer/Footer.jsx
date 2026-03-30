@@ -4,7 +4,7 @@ import { FaX } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#101727] border-t border-gray-200 pt-16 pb-10">
+    <footer className="bg-[#101727]  border-gray-200 pt-16 pb-10">
       
       <div className="max-w-7xl mx-auto px-6">
         
