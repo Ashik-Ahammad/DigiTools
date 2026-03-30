@@ -12,7 +12,7 @@
       "50+ writing templates",
       "Grammar checker"
     ],
-    "icon": "/src/assets/products/writing_2327400 1.png"
+    "icon": "writing"
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
       "Monthly updates",
       "Commercial license"
     ],
-    "icon": "/src/assets/products/design-tool.png"
+    "icon": "design"
   },
   {
     "id": 3,
@@ -42,7 +42,7 @@
       "Commercial use",
       "No attribution"
     ],
-    "icon": "/src/assets/camera.png"
+    "icon": "camera"
   },
   {
     "id": 4,
@@ -57,7 +57,7 @@
       "API access",
       "Custom workflows"
     ],
-    "icon": "/src/assets/products/operation.png"
+    "icon": "operation"
   },
   {
     "id": 5,
@@ -72,7 +72,7 @@
       "ATS optimization",
       "Export to PDF"
     ],
-    "icon": "/src/assets/products/portfolio.png"
+    "icon": "portfolio"
   },
   {
     "id": 6,
@@ -87,7 +87,7 @@
       "Scheduler included",
       "Analytics dashboard"
     ],
-    "icon": "/src/assets/products/social-media.png"
+    "icon": "social"
   },
   {
     "id": 7,
@@ -102,7 +102,7 @@
       "Multi-platform support",
       "AI training tools"
     ],
-    "icon": "/src/assets/chatbot.png"
+    "icon": "chatbot"
   },
   {
     "id": 8,
@@ -117,7 +117,7 @@
       "100+ effects",
       "Fast rendering"
     ],
-    "icon": "/src/assets/video-editing.png"
+    "icon": "video"
   },
   {
     "id": 9,
@@ -132,6 +132,6 @@
       "SEO audit",
       "Competitor tracking"
     ],
-    "icon": "/src/assets/seo.png"
+    "icon": "seo"
   }
 ]

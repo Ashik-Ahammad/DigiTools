@@ -28,10 +28,11 @@ function App() {
   return (
     <>
       <header>
-        <NavBar></NavBar>
+        <NavBar carts={carts}></NavBar>
         <Banner></Banner>
       </header>
       <main>
+        <Stats></Stats>
         <ProductsHeading></ProductsHeading>
         <Tab activeTab={activeTab}
           handleTabChange={handleTabChange} carts={carts}></Tab>
@@ -47,7 +48,6 @@ function App() {
           </Suspense>
         )}
         {activeTab === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart>}
-        <Stats></Stats>
       </main>
       <footer>
         <Explore></Explore>

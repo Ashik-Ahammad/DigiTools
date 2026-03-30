@@ -1,5 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
+import { icons } from "../../assets/icons.js";
 
 const Product = ({ product, carts, setCarts }) => {
   const isAdded = carts.some(item => item.id === product.id);
@@ -29,7 +30,7 @@ const Product = ({ product, carts, setCarts }) => {
       </div>
 
       <div className="w-12 h-12 rounded-full bg-base-200 flex items-center justify-center mb-4">
-        <img src={product.icon} alt={product.name} className="w-6 h-6" />
+        <img src={icons[product.icon]} alt={product.name} className="w-6 h-6" />
       </div>
 
       <h2 className="text-xl font-bold mb-2">{product.name}</h2>

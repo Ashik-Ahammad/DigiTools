@@ -9,11 +9,18 @@ const Banner = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
         <div className="space-y-5 text-center lg:text-left">
           <div className="inline-flex items-center justify-center lg:justify-start gap-2 bg-sky-100 text-blue-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
-            <img src={Dot} className="border rounded-full p-0.5"></img> New: AI-Powered Tools Available
+            <img src={Dot} className="border rounded-full p-0.5"></img> New:
+            AI-Powered Tools Available
           </div>
 
-          <h1 className="lg:text-7xl sm:text-3xl md:text-5xl font-bold leading-tight tracking-tight text-blue-950">
-            Supercharge Your Digital Workflow
+          <h1 className="lg:text-4xl sm:md:text-3xl font-bold text-blue-950">
+            <span className="text-rotate">
+              <span>
+                <span>Supercharge Your Digital Workflow</span>
+                <span>Power Up Your Daily Operations</span>
+                <span>Ignite Your Digital Productivity</span>
+              </span>
+            </span>
           </h1>
 
           <p className="text-base sm:text-lg text-[#627382] max-w-lg mx-auto lg:mx-0">
