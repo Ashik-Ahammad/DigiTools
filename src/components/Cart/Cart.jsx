@@ -78,7 +78,7 @@ const Cart = ({ carts, setCarts }) => {
                 onClick={() => handleDelete(item.id)}
                 className="font-extrabold text-red-500 hover:text-red-700 transition hover:underline hover:cursor-pointer"
               >
-                Delete
+                Remove
               </button>
             </div>
           </div>
