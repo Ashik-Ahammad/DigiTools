@@ -51,7 +51,7 @@ const Cart = ({ carts, setCarts }) => {
                 <h2 className="text-lg font-bold">{item.name}</h2>
 
                 <span
-                  className={`badge text-white px-3 py-2 capitalize
+                  className={`badge text-white rounded-full px-3 py-2 capitalize
                   ${
                     item.tagType === "popular"
                       ? "badge-primary"
