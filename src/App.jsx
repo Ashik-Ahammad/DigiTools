@@ -9,6 +9,7 @@ import Stats from "./components/Stats/Stats";
 import Products from "./components/Products/Products";
 import Tab from "./components/Tab/Tab";
 import Cart from './components/Cart/Cart';
+import { ToastContainer } from "react-toastify";
 
 const fetchProductsData = async () => {
   const res = await fetch("/products.json");
@@ -18,6 +19,7 @@ const fetchProductsData = async () => {
 function App() {
   const productsPromise = fetchProductsData();
   const [activeTab, setActiveTab] = useState("products");
+  const [carts, setCarts] = useState([]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
@@ -30,10 +32,9 @@ function App() {
         <Banner></Banner>
       </header>
       <main>
-        <Stats></Stats>
         <ProductsHeading></ProductsHeading>
         <Tab activeTab={activeTab}
-          handleTabChange={handleTabChange}></Tab>
+          handleTabChange={handleTabChange} carts={carts}></Tab>
         {activeTab === "products" && (
           <Suspense
             fallback={
@@ -42,14 +43,16 @@ function App() {
               </div>
             }
           >
-            <Products productsPromise={productsPromise}></Products>
+            <Products productsPromise={productsPromise} carts={carts} setCarts={setCarts}></Products>
           </Suspense>
         )}
-        {activeTab === "cart" && <Cart></Cart>}
+        {activeTab === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart>}
+        <Stats></Stats>
       </main>
       <footer>
         <Explore></Explore>
         <Footer></Footer>
+        <ToastContainer position="top-right" autoClose={2000} />
       </footer>
     </>
   );

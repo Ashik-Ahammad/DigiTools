@@ -34,7 +34,7 @@ const Banner = () => {
 
         <div className="flex justify-center lg:justify-end">
           <img
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl rounded-3xl animate-pulse"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl rounded-3xl hover:scale-105 transition-transform duration-300"
             src={BannerImage}
             alt="BannerImage"
           />
