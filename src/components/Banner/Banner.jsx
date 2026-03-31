@@ -5,7 +5,7 @@ import Dot from "../../assets/dot.png";
 
 const Banner = () => {
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-10">
+    <div className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-10 mt-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
         <div className="space-y-5 text-center lg:text-left">
           <div className="inline-flex items-center justify-center lg:justify-start gap-2 bg-sky-100 text-blue-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
@@ -41,7 +41,11 @@ const Banner = () => {
 
         <div className="flex justify-center lg:justify-end">
           <img
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl rounded-3xl hover:scale-105 transition-transform duration-300"
+            className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[90%] xl:w-full 
+             max-w-70 sm:max-w-87 md:max-w-105 lg:max-w-125 xl:max-w-150
+             mx-auto lg:mx-0
+             object-contain drop-shadow-2xl rounded-3xl 
+             hover:scale-105 transition-transform duration-300"
             src={BannerImage}
             alt="BannerImage"
           />
