@@ -29,6 +29,9 @@ This project is a fully functional frontend marketplace for AI-based tools and s
     * Toast notifications for add, delete, and checkout actions
     * Disabled button state for already added items
     * Clean and responsive UI with hover effects
+## Served with Nginx in AWS EC2
+<img width="1885" height="925" alt="image" src="https://github.com/user-attachments/assets/9d33710e-b863-4e60-80e8-ffceefabeaae" />
+
 
 ## 📸 UI Highlights
 
